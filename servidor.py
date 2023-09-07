@@ -29,10 +29,6 @@ def modeloPrediccion():
         resultado=dt.predict(datosEntrada.reshape(1,-1))
         return jsonify({'resultado': str(resultado[0])})
 
-@servidorWeb.route("/holamundo",methods=['GET'])
-def holamundo():
-        return render_template('pagina1.html')
-
 #envio de datos a traves de JSON
 @servidorWeb.route('/modeloForm',methods=['POST'])
 def modeloForm():
